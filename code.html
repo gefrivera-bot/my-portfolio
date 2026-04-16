@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gerard Ethan Francis Rivera — FRONTEND DEVELOPER</title>
+<!-- Google Fonts: Space Grotesk for Headers/Labels, Inter for Body -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#956d67",
+                        "primary-container": "#eb0000",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-secondary-container": "#646464",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#d7e2ff",
+                        "secondary": "#5e5e5e",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-surface-variant": "#603e39",
+                        "outline-variant": "#ebbbb4",
+                        "tertiary-fixed-dim": "#acc7ff",
+                        "on-tertiary-container": "#fefcff",
+                        "primary": "#bc0100",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary-container": "#0071e8",
+                        "on-primary-fixed": "#410000",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary": "#0059ba",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#930100",
+                        "on-background": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "surface-tint": "#c00100",
+                        "on-tertiary-fixed-variant": "#004491",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed": "#001a40",
+                        "inverse-primary": "#ffb4a8",
+                        "surface-container-low": "#f3f3f4",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdad4",
+                        "on-primary-container": "#fffbff",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+        .font-mono-editorial { font-family: 'Space Grotesk', monospace; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .red-thread-container { position: relative; }
+        .red-thread-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: #bc0100;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar (Shared Component) -->
+<nav class="fixed top-[5%] left-1/2 -translate-x-1/2 w-[90%] max-w-5xl rounded-xl bg-slate-50/70 dark:bg-zinc-900/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(26,28,28,0.04)] flex justify-between items-center px-8 py-4 z-50">
+<div class="font-mono font-bold text-lg tracking-tighter text-zinc-900 dark:text-zinc-50">Gerard Ethan Francis Rivera</div>
+<div class="hidden md:flex items-center gap-8 font-mono tracking-tighter uppercase text-sm">
+<a class="text-red-700 dark:text-red-500 relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-red-700 after:rounded-full hover:text-red-700 transition-colors duration-200" href="#work">WORK</a>
+<span class="text-surface-container-highest">/</span>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-500 transition-colors duration-200" href="#about">ABOUT</a>
+<span class="text-surface-container-highest">/</span>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-500 transition-colors duration-200" href="#contact">CONTACT</a>
+</div>
+<button class="scale-95 active:scale-90 transition-transform bg-primary text-on-primary px-5 py-2 rounded-md font-mono text-sm tracking-tighter hover:bg-primary-container">
+            RESUME
+        </button>
+</nav>
+<main class="pt-32 px-6 max-w-7xl mx-auto space-y-40 mb-40">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center justify-between gap-16 min-h-[614px]">
+<div class="flex-1 space-y-8 order-2 md:order-1">
+<div class="inline-block px-3 py-1 bg-surface-container text-primary font-mono text-xs tracking-widest uppercase">Available for hire</div>
+<h1 class="text-5xl md:text-8xl font-headline font-bold leading-[0.9] tracking-tighter text-on-surface">
+                    I am Gerard Ethan Francis Rivera, <br/>
+<span class="text-primary">front-end developer.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl font-body leading-relaxed">
+                    Sculpting digital experiences with mechanical precision and editorial polish. Based in London, working globally.
+                </p>
+<div class="pt-4">
+<a class="inline-flex items-center gap-2 font-headline font-bold text-primary group" href="#work">
+                        EXPLORE WORK 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex-1 flex justify-center order-1 md:order-2">
+<div class="relative w-64 h-64 md:w-96 md:h-96">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl"></div>
+<img alt="Gerard Ethan Francis Rivera" class="w-full h-full object-cover rounded-full border-[12px] border-surface-container-lowest shadow-2xl relative z-10" data-alt="professional portrait of a creative professional in a minimalist studio setting with soft cinematic lighting and high contrast black and white style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFfbNIMI76UGQIRpAz4dd9Q-q88QAcUTM4x4GfvIx0USjHvGfiY2kPOyG22IhERfAXvlPYcUw73eOLEsZhNF0oskxGrxaxzpRSlxudMDo0V4DF1_FJbTUfyG0HP22C_54N5rtwhWJj6WA1JQV6S_HhRrFaOG_fWmmuLPIdqtqGjoRp33lBEo19AZXvdJMp_ju7DqUaA9HNlUcI6zf8pJRSzMOnEZL7OhQt1_k4ZjyocMuQLCcm3jW23zYiz_NiLl-EVGXBqGB3dzo"/>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-12" id="about">
+<div class="md:col-span-4 space-y-4">
+<h2 class="font-headline text-xs tracking-[0.3em] uppercase text-primary font-bold">About / Identity</h2>
+<h3 class="font-headline text-3xl font-bold tracking-tighter">The technical monolith approach.</h3>
+</div>
+<div class="md:col-span-8 space-y-12">
+<div class="space-y-6 text-lg text-on-surface font-body leading-relaxed max-w-2xl">
+<p>
+                        I specialize in building robust, high-performance interfaces that bridge the gap between complex engineering and minimalist design. My philosophy is rooted in the "Technical Monolith"—software that feels both solid and invisible.
+                    </p>
+<p>
+                        With a focus on modern React ecosystems, I leverage architectural patterns that ensure scalability without sacrificing the creative spark that makes a product memorable.
+                    </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline text-sm tracking-widest uppercase font-bold text-on-surface-variant">Core Stack</h4>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container-low font-mono text-sm uppercase tracking-tighter border-b-2 border-primary">React.js</span>
+<span class="px-4 py-2 bg-surface-container-low font-mono text-sm uppercase tracking-tighter border-b-2 border-primary">TypeScript</span>
+<span class="px-4 py-2 bg-surface-container-low font-mono text-sm uppercase tracking-tighter border-b-2 border-primary">Tailwind CSS</span>
+<span class="px-4 py-2 bg-surface-container-low font-mono text-sm uppercase tracking-tighter border-b-2 border-primary">Next.js</span>
+<span class="px-4 py-2 bg-surface-container-low font-mono text-sm uppercase tracking-tighter border-b-2 border-primary">Three.js</span>
+<span class="px-4 py-2 bg-surface-container-low font-mono text-sm uppercase tracking-tighter border-b-2 border-primary">Node.js</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section (Bento Style) -->
+<section class="space-y-16" id="work">
+<div class="flex justify-between items-end">
+<div class="space-y-2">
+<h2 class="font-headline text-xs tracking-[0.3em] uppercase text-primary font-bold">Selected Work</h2>
+<p class="font-headline text-4xl font-bold tracking-tighter">Engineered with precision.</p>
+</div>
+<div class="hidden md:block font-mono text-xs text-on-surface-variant uppercase tracking-widest">
+                    Archive / 2021—2024
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 01 -->
+<div class="group relative bg-surface-container-lowest p-6 flex flex-col gap-6">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="sleek modern web interface for a fintech dashboard with dark mode and neon red accents, technical and clean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTM1QOV7vb_ye-KGb1UqwnRoxG2fzti6xLTEH0KgDQEUDigaXDvnoylsrVmWXAJVtglfSxHiog2z7-LFKRx1amlGQ5Wv4-oMGNvfbi31hoil7Vm-K7LpE84FNuV-oUAM5VaQQG0N4bJAPrmXUu22zygvaIKI8LvN8yUGwFbq9TYYEce8NLvxsSwWP-wfUY7nJU2FT_WiCUc1zf-vDAwxmTFHqL_udBGWCa71vOwcgMJHESE1xij58bs2MPCe-I2n5khFyMiRy4Uvs"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold tracking-tighter uppercase">Kryon Dynamics</h3>
+<span class="font-mono text-xs bg-surface-container-high px-2 py-1">2024</span>
+</div>
+<p class="text-on-surface-variant font-body">An enterprise-grade performance monitor for high-frequency trading platforms. Built with Next.js and WebSockets.</p>
+<div class="pt-2 flex gap-4">
+<button class="bg-primary text-on-primary px-4 py-2 font-mono text-xs tracking-tighter flex items-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                            </button>
+<button class="text-primary font-mono text-xs tracking-tighter border-b border-primary/20 hover:border-primary transition-all">VIEW SITE</button>
+</div>
+</div>
+</div>
+<!-- Project 02 -->
+<div class="group relative bg-surface-container-lowest p-6 flex flex-col gap-6 md:translate-y-12">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Project 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="minimalist architectural portfolio website with aggressive typography and large whitespace, clean and professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi4IDcfwH4TrF7FeuHqiCIRO-YFRmMjqspMdN42f8wS8IEZ8TyhDTrVQkEw6TzhCHy-VcWKLeuEhvztniJmEXXcJj33CeGl8cqOXCqQkeZRjAtOoXyxzAQAbEI8le2-iahbCyHfn21wdPP8v-y5uXTgS9EDL6Qt3Srjhedl-CSJ3gnjidM4ltIk959ZeEUnp0ryG1d5bWWunJO4e7GC-G2Vd2P6F62PPw54O0LQl4x4XPnCyeWsMOdkBSNdLIY-5PC5GLsNYRHKe8"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold tracking-tighter uppercase">Atelier Void</h3>
+<span class="font-mono text-xs bg-surface-container-high px-2 py-1">2023</span>
+</div>
+<p class="text-on-surface-variant font-body">Minimalist portfolio framework for architectural firms focusing on spatial depth and typography.</p>
+<div class="pt-2 flex gap-4">
+<button class="bg-primary text-on-primary px-4 py-2 font-mono text-xs tracking-tighter flex items-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                            </button>
+<button class="text-primary font-mono text-xs tracking-tighter border-b border-primary/20 hover:border-primary transition-all">VIEW SITE</button>
+</div>
+</div>
+</div>
+<!-- Project 03 -->
+<div class="group relative bg-surface-container-lowest p-6 flex flex-col gap-6">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Project 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="high-end editorial blog layout with serif fonts and intense red accents, grid-based and artistic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV93BpnCam2Tc0TZ_IVtZIs_9AeJw0tVFIwdbNPvohLZNt_AhBq5VehxiNdX20ucsNeWlo854ihmxWdqOynon6LP2VjS-Qw3gf9HbyT0IZY8D0koKJf4DTH9gQ-ZvDzS-rTqn9eyHFEx1OL0UX27dYIuG9RfGluUSI1g8low0UFJFxGiAcIhKKfhR6Ciuhf571Hbtetd3rQyONjPPkpJKjo1hje0y4ZVJTgYKOGK9a1Z5XWzai30XU2wGMm4HPNPVCVPrT41fvwGw"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold tracking-tighter uppercase">The Monolith</h3>
+<span class="font-mono text-xs bg-surface-container-high px-2 py-1">2023</span>
+</div>
+<p class="text-on-surface-variant font-body">A headless CMS starter kit optimized for developer speed and editorial control.</p>
+<div class="pt-2 flex gap-4">
+<button class="bg-primary text-on-primary px-4 py-2 font-mono text-xs tracking-tighter flex items-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                            </button>
+<button class="text-primary font-mono text-xs tracking-tighter border-b border-primary/20 hover:border-primary transition-all">VIEW SITE</button>
+</div>
+</div>
+</div>
+<!-- Project 04 -->
+<div class="group relative bg-surface-container-lowest p-6 flex flex-col gap-6 md:translate-y-12">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Project 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="abstract visual representation of data streams with glowing red lines on a dark background, high-tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUCjHJDZFxFOXG0eP0HuctKp5nCXho3aJt9J2cDd1peSxOCkylUTruxf1-VazIc79IEeK1zMj9BNccu1qA_Dn6jKDBe1rig8CA_slzTC33Qfs6rDzsrkBHUAhadOaFV9TkDVFOgl_E6w2o0IOWH9ONZj53Yh11nUerLu4ZTLfciPrPZ27EuPT-peKDdYFKXQEnypfK6UR8yTzvgfF1cWU3_5l-LZ9ttlRfxUGpZSWMzqPsFfDMdC0tdEoahBV70FHvyGpI1zvnW3A"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold tracking-tighter uppercase">Ether Stream</h3>
+<span class="font-mono text-xs bg-surface-container-high px-2 py-1">2022</span>
+</div>
+<p class="text-on-surface-variant font-body">Real-time data visualization engine for cloud infrastructure monitoring.</p>
+<div class="pt-2 flex gap-4">
+<button class="bg-primary text-on-primary px-4 py-2 font-mono text-xs tracking-tighter flex items-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                            </button>
+<button class="text-primary font-mono text-xs tracking-tighter border-b border-primary/20 hover:border-primary transition-all">VIEW SITE</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="pt-20" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="space-y-8">
+<h2 class="font-headline text-xs tracking-[0.3em] uppercase text-primary font-bold">Contact / Inquiries</h2>
+<h3 class="font-headline text-5xl font-bold tracking-tighter leading-none">Let’s engineer <br/> something great.</h3>
+<div class="space-y-4 font-body text-on-surface-variant">
+<p>Currently open to new projects and permanent collaborations.</p>
+<a class="block font-headline text-xl text-on-surface font-bold underline decoration-primary decoration-2 underline-offset-8" href="mailto:hello@johndoe.com">hello@johndoe.com</a>
+</div>
+</div>
+<form class="bg-surface-container-lowest p-10 space-y-8">
+<div class="relative group">
+<label class="font-mono text-[10px] uppercase tracking-widest text-on-surface-variant block mb-2">Full Name</label>
+<input class="w-full bg-transparent border-none border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 px-0 text-on-surface font-body placeholder:text-surface-container-highest" placeholder="John Smith" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-mono text-[10px] uppercase tracking-widest text-on-surface-variant block mb-2">Email Address</label>
+<input class="w-full bg-transparent border-none border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 px-0 text-on-surface font-body placeholder:text-surface-container-highest" placeholder="john@example.com" type="email"/>
+</div>
+<div class="relative group">
+<label class="font-mono text-[10px] uppercase tracking-widest text-on-surface-variant block mb-2">Message</label>
+<textarea class="w-full bg-transparent border-none border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 px-0 text-on-surface font-body placeholder:text-surface-container-highest resize-none" placeholder="Tell me about your project..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 font-headline font-bold uppercase tracking-widest hover:bg-primary-container transition-colors" type="submit">
+                        Send Message
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-zinc-100 dark:bg-zinc-950 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-mono text-xs tracking-widest uppercase text-zinc-500">
+            © 2024 Gerard Ethan Francis Rivera — ENGINEERED WITH PRECISION
+        </div>
+<div class="flex gap-8 font-mono text-xs tracking-widest uppercase text-zinc-500">
+<a class="hover:text-red-600 transition-colors" href="#">GITHUB</a>
+<a class="hover:text-red-600 transition-colors" href="#">LINKEDIN</a>
+<a class="hover:text-red-600 transition-colors" href="#">TWITTER</a>
+</div>
+</footer>
+<!-- Signature Red Thread -->
+<div class="fixed right-10 top-0 h-full w-[1px] bg-primary/10 hidden lg:block">
+<div class="absolute top-[20%] right-[-4px] w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_#bc0100]"></div>
+</div>
+</body></html>
