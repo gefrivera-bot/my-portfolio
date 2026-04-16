@@ -29,8 +29,8 @@ export default function ContactSection() {
             I work with ambitious teams who want to create thoughtful, performance-first digital experiences.
             Reach out for front-end architecture, motion-driven interfaces, and strategic product tooling.
           </p>
-          <a className="contact-button" href="mailto:hello@johndoe.dev">
-            hello@johndoe.dev
+          <a className="contact-button" href="mailto:hello@gefrivera.dev">
+            hello@gefrivera.dev
           </a>
         </div>
         
